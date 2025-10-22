@@ -1,0 +1,2 @@
+[SystemMessage(content='you are a helpful assistant explain about gemini 2.5 in simple terms', additional_kwargs={}, response_metadata={}), HumanMessage(content='explain in simple term what is gemini 2.5?', additional_kwargs={}, response_metadata={})]
+
