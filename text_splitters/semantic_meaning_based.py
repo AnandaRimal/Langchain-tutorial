@@ -21,3 +21,46 @@ print(len(docs))
 print(docs)
 
 
+
+"""🔹 How it Works (High-Level Steps)
+
+Embed the Text
+
+Convert text into vector representations (embeddings) using models like OpenAI’s text-embedding-3-large.
+
+Each sentence, paragraph, or small piece gets its semantic vector.
+
+Compute Similarity
+
+Compare neighboring pieces using cosine similarity or other distance measures.
+
+Idea: If two pieces are highly related, keep them in the same chunk.
+
+If similarity drops, that’s a natural boundary → start a new chunk.
+
+Chunking with Context
+
+Start with a base size (like 500 tokens)
+
+Add pieces one by one, but monitor semantic similarity.
+
+Stop adding when similarity drops too much or chunk size limit is reached.
+
+Optional Overlap
+
+You can overlap pieces to preserve context between chunks."""
+
+
+
+""""Paragraph 1: Cricket is a bat-and-ball game played internationally.  
+Paragraph 2: It involves batting and bowling strategies.  
+Paragraph 3: Football is another popular sport worldwide.
+
+Semantic splitting might produce:
+
+Chunk 1 → Paragraphs 1 + 2 (because both are about cricket, high semantic similarity)
+
+Chunk 2 → Paragraph 3 (football is unrelated, so a new chunk)
+
+Notice: Even if paragraphs are short, semantic splitting keeps related ideas together.
+"""
