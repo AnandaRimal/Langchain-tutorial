@@ -21,6 +21,7 @@ dependencies = [
     "langchain-google-genai>=2.0.10",
     "langchain-ollama>=0.3.10",
     "langchain-openai>=0.3.35",
+    "matplotlib>=3.10.7",
     "numpy>=2.3.4",
     "openai>=2.6.0",
     "pdfminer>=20191125",
